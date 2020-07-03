@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e
 
@@ -37,6 +37,7 @@ run() {
       -p 21324:21324 \
       -p 21325:21325 \
       mroz22/trezor-user-env:beta
+
   fi
 
   if [[ $3 == "master" ]]; then
