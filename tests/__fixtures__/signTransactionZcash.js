@@ -7,11 +7,11 @@ export default {
         {
             // See https://zec1.trezor.io/tx/0f762a2da5252d684fb3510a3104bcfb556fab34583b3b0e1994d0f7409cc075
             description: "sign input v2",
-            setup: {
-                firmware: [
-                    ['2.0.0', '2.1.8'],
-                ],
-            },
+            // setup: {
+            //     firmware: [
+            //         ['2.0.0', '2.1.8'],
+            //     ],
+            // },
             params: {
                 coin: 'Zcash',
                 inputs: [
