@@ -14,6 +14,8 @@ export default {
             // },
             params: {
                 coin: 'Zcash',
+                version: 4,
+                overwintered: true,
                 inputs: [
                     {
                         address_n: [2147483692, 2147483781, 2147483648, 0, 0],
