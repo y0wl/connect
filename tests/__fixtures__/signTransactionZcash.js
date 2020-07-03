@@ -21,6 +21,7 @@ export default {
                         address_n: [2147483692, 2147483781, 2147483648, 0, 0],
                         prev_hash: '29d25589db4623d1a33c58745b8f95b131f49841c79dcd171847d0d7e9e2dc3a',
                         prev_index: 0,
+                        amount: '800000',
                     },
                 ],
                 outputs: [
