@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import fixtures from '../__fixtures__';
 const { setup, initTrezorConnect, Controller, TrezorConnect } = global.Trezor;
 

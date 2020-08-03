@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 const WebSocket = require('ws');
 const { EventEmitter } = require('events');
 
@@ -165,6 +164,7 @@ class Controller extends EventEmitter {
         const ws = new WebSocket(url);
         ws.once('error', error => {
             this.dispose();
+            // eslint-disable-next-line no-console
             console.log(error);
             dfd.reject(new Error('websocket_runtime_error: ', error.message));
         });

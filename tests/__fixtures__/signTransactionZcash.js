@@ -6,7 +6,7 @@ export default {
     tests: [
         {
             // See https://zec1.trezor.io/tx/0f762a2da5252d684fb3510a3104bcfb556fab34583b3b0e1994d0f7409cc075
-            description: "sign input v2",
+            description: 'sign input v2',
             setup: {
                 firmware: [
                     ['2.0.0', '2.1.8'],
@@ -31,11 +31,11 @@ export default {
             },
             result: {
                 serializedTx: '01000000013adce2e9d7d0471817cd9dc74198f431b1958f5b74583ca3d12346db8955d229000000006b483045022100f36da2fba65831c24bae2264892d914abdf65ee747ba9e8deeaeb13d1c72b03102200b8ecb59698dbe90f8cfe529a6d05c8b7fa2f31a2f5a7a1b993700a20d04d63a0121022f5c53b6d2e1b64c37d85716dbef318bd398ad7d2a03d94960af060402380658ffffffff01081a0100000000001976a9142e383c56fe3df202792e6f4460c8056b6a4d5b3488ac00000000',
-            }
+            },
         },
         {
             // See https://zec1.trezor.io/tx/e5229ae8c02f74af5e0c2100371710424fa85902c29752498c39921de2246824
-            description: "sign 2 inputs v1",
+            description: 'sign 2 inputs v1',
             setup: {
                 firmware: [
                     ['2.0.0', '2.1.8'],
@@ -70,7 +70,7 @@ export default {
         {
             // NOTE: this is not a valid transaction
             // Inputs from https://zec1.trezor.io/tx/e2802f0118d9f41f68b65f2b9f4a7c2efc876aee4e8c4b48c4a4deef6b7c0c28
-            description: "sign 2 inputs with change v3",
+            description: 'sign 2 inputs with change v3',
             params: {
                 coin: 'Zcash',
                 version: 3,
@@ -110,7 +110,7 @@ export default {
         {
             // NOTE: this is not a valid transaction
             // Inputs from https://zec1.trezor.io/tx/234b2cf6cb2a50be29f45efae27fe717e3bb31967a72927d122cac1f50988cab
-            description: "sign 1 input v4",
+            description: 'sign 1 input v4',
             params: {
                 coin: 'Zcash',
                 version: 4,
@@ -138,9 +138,8 @@ export default {
         },
         {
             // https://tzec1.trezor.io/tx/0cef132c1d6d67f11cfa48f7fca3209da29cf872ac782354bedb686e61a17a78
-            description: "testnet v4",
+            description: 'testnet v4',
             params: {
-                coin: 'Zcash',
                 coin: 'taz',
                 version: 4,
                 overwintered: true,
@@ -200,7 +199,7 @@ export default {
         },
         {
             // https://tzec1.trezor.io/tx/737eb78fc69f30ec9eff04359a1551969e026472ae5530e287a838047e237098
-            description: "testnet blossom fork",
+            description: 'testnet blossom fork',
             params: {
                 coin: 'taz',
                 version: 4,

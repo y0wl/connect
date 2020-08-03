@@ -1,18 +1,18 @@
 const outputs = [];
-    const total: number = 255;
-    for (let i = 0; i < total; i++) {
-        const output = {
-            address: '1NwN6UduuVkJi6sw3gSiKZaCY5rHgVXC2h',
-            amount: Math.floor((100000 + 2540000 - 39000) / total).toString(),
-            script_type: 'PAYTOADDRESS',
-        };
+const total = 255;
+for (let i = 0; i < total; i++) {
+    const output = {
+        address: '1NwN6UduuVkJi6sw3gSiKZaCY5rHgVXC2h',
+        amount: Math.floor((100000 + 2540000 - 39000) / total).toString(),
+        script_type: 'PAYTOADDRESS',
+    };
 
-        outputs.push(output);
-    }
+    outputs.push(output);
+}
 
-    let serializedTx = '0100000002fb792f470a58993e14964c9bd46cdf37cb4bbc3f61540cb651580c82ed243ec6010000006b483045022100969da46f94a81f34f3717b014e0c3e1826eda1b0022ec2f9ce39f3d750ab9235022026da269770993211a1503413566a339bbb4389a482fffcf8e1f76713fc3b94f5012103477b9f0f34ae85434ce795f0c5e1e90c9420e5b5fad084d7cce9a487b94a7902ffffffffe56582d2119100cb1d3da8232291e053f71e25fb669c87b32a667749959ea239010000006a473044022052e1419bb237b9db400ab5e3df16db6355619d545fde9030924a360763ae9ad40220704beab04d72ecaeb42eca7d98faca7a0941e65f2e1341f183be2b83e6b09e1c012103477b9f0f34ae85434ce795f0c5e1e90c9420e5b5fad084d7cce9a487b94a7902fffffffffdff00';
-    serializedTx = serializedTx + 'd8270000000000001976a914f0a2b64e56ee2ff57126232f84af6e3a41d4055088ac'.repeat(total);
-    serializedTx = serializedTx + '00000000';
+let serializedTx = '0100000002fb792f470a58993e14964c9bd46cdf37cb4bbc3f61540cb651580c82ed243ec6010000006b483045022100969da46f94a81f34f3717b014e0c3e1826eda1b0022ec2f9ce39f3d750ab9235022026da269770993211a1503413566a339bbb4389a482fffcf8e1f76713fc3b94f5012103477b9f0f34ae85434ce795f0c5e1e90c9420e5b5fad084d7cce9a487b94a7902ffffffffe56582d2119100cb1d3da8232291e053f71e25fb669c87b32a667749959ea239010000006a473044022052e1419bb237b9db400ab5e3df16db6355619d545fde9030924a360763ae9ad40220704beab04d72ecaeb42eca7d98faca7a0941e65f2e1341f183be2b83e6b09e1c012103477b9f0f34ae85434ce795f0c5e1e90c9420e5b5fad084d7cce9a487b94a7902fffffffffdff00';
+serializedTx = serializedTx + 'd8270000000000001976a914f0a2b64e56ee2ff57126232f84af6e3a41d4055088ac'.repeat(total);
+serializedTx = serializedTx + '00000000';
 
 export default {
     method: 'signTransaction',
@@ -196,8 +196,8 @@ export default {
             },
         },
         {
-          // See tx 6f90f3c7cbec2258b0971056ef3fe34128dbde30daa9c0639a898f9977299d54
-          description: 'testnet fee too high',
+            // See tx 6f90f3c7cbec2258b0971056ef3fe34128dbde30daa9c0639a898f9977299d54
+            description: 'testnet fee too high',
             params: {
                 coin: 'Testnet',
                 inputs: [

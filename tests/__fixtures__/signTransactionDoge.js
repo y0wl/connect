@@ -7,7 +7,7 @@ export default {
         {
         // Note: this transaction is not valid
         // it uses some inputs from coin exchange to test big amounts calculation
-        description: "big amounts",
+            description: 'big amounts',
             params: {
                 coin: 'Doge',
                 inputs: [
@@ -36,7 +36,7 @@ export default {
                     '30440220630fb136ace260ea0e28039a1e847d52ab4ca826975bb923681d407375e9ccaa022012c060120d56d1908fe89353927e8746238811ce9e6c4593d7874bd2927beb75',
                 ],
                 serializedTx: '010000000118e15e067bedcf9a2768f1d72a27a056bee41238e5f00137335574c2d5b74c0a0c0000006a4730440220630fb136ace260ea0e28039a1e847d52ab4ca826975bb923681d407375e9ccaa022012c060120d56d1908fe89353927e8746238811ce9e6c4593d7874bd2927beb750121021e49598faaca4bb40db6c73d2aafb93bae864d12b1af9e83c952412f3b02ae4cffffffff02f8500c5381cd04001976a914347b22316f4920eba6b61aa79889c314386f9a6088ac0000c16ff28623001976a914a1e0c04eb8da2d135c3249cf39b69c86494f78b688ac00000000',
-            }
+            },
         },
     ],
 };

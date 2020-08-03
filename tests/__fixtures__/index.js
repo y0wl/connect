@@ -121,7 +121,7 @@ let fixtures = [
     tezosGetPublicKey,
     verifyMessage,
     verifyMessageSegwit,
-    verifyMessageSegwitNative
+    verifyMessageSegwitNative,
     // todo: wipeDevice,
     // todo: resetDevice,
 ];
@@ -133,7 +133,7 @@ if (firmware) {
     fixtures = fixtures.map(f => {
         f.tests = f.tests.filter(t => {
             if (!t.setup || !t.setup.firmware) {
-                return true; 
+                return true;
             }
             return t.setup.firmware.some(firmware => {
                 const [fromMajor, fromMinor, fromPatch] = firmware[0].split('.');
@@ -145,12 +145,11 @@ if (firmware) {
                     actualMajor <= toMajor &&
                     actualMinor <= toMinor &&
                     actualPatch <= toPatch
-                )
-            })
+                );
+            });
         });
         return f;
-    })
-    
+    });
 }
 
 const includedMethods = process.env.TESTS_INCLUDED_METHODS;
@@ -160,7 +159,6 @@ if (includedMethods) {
     fixtures = fixtures.filter(f => {
         return methodsArr.some(includedM => includedM === f.method);
     });
-    
 } else if (excludedMethods) {
     const methodsArr = excludedMethods.split(',');
     fixtures = fixtures.filter(f => {
@@ -169,6 +167,6 @@ if (includedMethods) {
 }
 
 // sort by mnemonic to avoid emu re-loading
-fixtures = fixtures.sort((a,b) => (a.setup.mnemonic > b.setup.mnemonic) ? 1 : ((b.setup.mnemonic > a.setup.mnemonic) ? -1 : 0)); 
+fixtures = fixtures.sort((a, b) => (a.setup.mnemonic > b.setup.mnemonic) ? 1 : ((b.setup.mnemonic > a.setup.mnemonic) ? -1 : 0));
 
 export default fixtures;
