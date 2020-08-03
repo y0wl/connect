@@ -40,7 +40,7 @@ const setup = async (controller, options) => {
             options,
         });
         // todo: temporary
-        // await controller.send({ type: 'emulator-allow-unsafe-paths'});
+        await controller.send({ type: 'emulator-allow-unsafe-paths'});
 
         // after all is done, start bridge again
         await controller.send({ type: 'bridge-start' });
