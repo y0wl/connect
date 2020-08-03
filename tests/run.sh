@@ -67,7 +67,7 @@ show_usage() {
 }
 
 custom_firmware_build=''
-firmware='2.3.1'
+firmware='2.3.2'
 included_methods=''
 excluded_methods=''
 gui_output=false
