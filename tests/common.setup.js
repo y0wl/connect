@@ -39,6 +39,8 @@ const setup = async (controller, options) => {
             needs_backup: false,
             options,
         });
+        // todo: temporary
+        await controller.send({ type: 'emulator-allow-unsafe-paths'});
         // after all is done, start bridge again
         await controller.send({ type: 'bridge-start' });
         // Wait to prevent Transport is missing error from TrezorConnect

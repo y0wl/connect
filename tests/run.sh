@@ -26,7 +26,7 @@ run() {
       -p 9001:9001 \
       -p 21324:21324 \
       -p 21325:21325 \
-      mroz22/trezor-user-env:latest
+      mroz22/trezor-user-env:beta
   else
     xhost +
     docker run --rm -d \
@@ -38,7 +38,7 @@ run() {
       -p 9001:9001 \
       -p 21324:21324 \
       -p 21325:21325 \
-      mroz22/trezor-user-env:latest
+      mroz22/trezor-user-env:beta
   fi
 
   if [[ $3 == "master" ]]; then
