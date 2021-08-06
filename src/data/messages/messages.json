@@ -5086,7 +5086,7 @@
                 {
                     "rule": "optional",
                     "options": {},
-                    "type": "uint32",
+                    "type": "uint64",
                     "name": "chain_id",
                     "id": 9
                 },
@@ -5116,7 +5116,7 @@
                 {
                     "rule": "optional",
                     "options": {},
-                    "type": "uint32",
+                    "type": "uint64",
                     "name": "signature_v",
                     "id": 2
                 },
